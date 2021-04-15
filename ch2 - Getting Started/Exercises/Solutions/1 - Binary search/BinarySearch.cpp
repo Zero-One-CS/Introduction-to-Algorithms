@@ -24,12 +24,6 @@ int binarySearch(int arr[], int size, int key)
 
 int main()
 {
-    // 20 1 3 15 100 16 27 2
-    // 18
-
-
-
-
 
     int testArr[] = {1,2,3,4,10,15,20,100};
     int key = 1;
