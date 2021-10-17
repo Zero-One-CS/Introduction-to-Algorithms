@@ -42,13 +42,27 @@ void BuildMaxHeap(int arr[], int n)
     }
 }
 
+void HeapSort(int arr[], int length)
+{
+    BuildMaxHeap(arr, length);
+
+    for (int i = length - 1; i >= 0; i--)
+    {
+        swap(arr[i], arr[0]);
+        // length -= 1 ;
+        // MaxHeapify(arr, length, 0);
+        MaxHeapify(arr, i, 0);
+    }
+}
+
 int main()
 {
 
     int arr[] = {1, 3, 5, 4, 6, 13, 10, 9, 8, 15, 17};
     int n = sizeof(arr) / sizeof(arr[0]);
 
-    MaxHeapify(arr, n, 2);
+    // MaxHeapify(arr, n, 2);
+    HeapSort(arr, n);
     PrintHeap(arr, n);
 
     // BuildMaxHeap(arr, n);
