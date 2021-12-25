@@ -18,6 +18,12 @@ int Dequeue(int arr[], int n) //remove the element from the queue that has the h
     return element;
 }
 
+void DeleteElement(int arr[], int index, int n)
+{
+    swap(arr[n], arr[index]);
+    BuildMaxHeap(arr, n - 1);
+}
+
 int Peek(int arr[], int n)
 {
     return arr[0];
